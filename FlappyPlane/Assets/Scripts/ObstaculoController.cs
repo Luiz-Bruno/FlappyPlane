@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ObstaculoController : MonoBehaviour
 {
-    
-    // Variável dfe velocidade
 
+    // Variável dfe velocidade
+    [SerializeField] private float velocidade = 5f;
 
 
     
@@ -21,6 +21,6 @@ public class ObstaculoController : MonoBehaviour
     {
         // Indo para a esquerda
         //transform.position = transform.position + Vector3.left;
-        transform.position += Vector3.left * Time.deltaTime;
+        transform.position += Vector3.left * Time.deltaTime * velocidade;
     }
 }
