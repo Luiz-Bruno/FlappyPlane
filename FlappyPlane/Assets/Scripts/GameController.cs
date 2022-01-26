@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
             Debug.Log("Oi");
 
             // Resetando o meu timer
+            // Timer vai ficar com um valor aleatório entre 1 e 3
             timer = 1f;
 
 

@@ -264,3 +264,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 5
+  eu: {fileID: 7731587842580927233}
