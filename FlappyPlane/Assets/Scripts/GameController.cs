@@ -16,6 +16,10 @@ public class GameController : MonoBehaviour
     // Posição mínima e máxima
     [SerializeField] private float posMin = -0.3f;
     [SerializeField] private float posMax = 2.4f;
+
+    // TEmpo mínimo e máximo
+    [SerializeField] private float tMin = 1f;
+    [SerializeField] private float tMAx = 3f;
     
     // Start is called before the first frame update
     void Start()
@@ -39,8 +43,9 @@ public class GameController : MonoBehaviour
             Debug.Log("Oi");
 
             // Resetando o meu timer
-            // Timer vai ficar com um valor aleatório entre 1 e 3
-            timer = 1f;
+            // Timer vai ficar com um valor aleatório entre 1f e 3f
+            timer = Random.Range(tMin, tMAx);
+            
 
 
             posicao.y = Random.Range(posMin, posMax);
