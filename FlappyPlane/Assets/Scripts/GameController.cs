@@ -52,7 +52,8 @@ public class GameController : MonoBehaviour
         {
         pontos += Time.deltaTime;
 
-        Debug.Log(pontos);
+
+        Debug.Log(Mathf.Round(pontos));
     }
 
     private void CriaObstaculo()
