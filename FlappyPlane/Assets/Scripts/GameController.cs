@@ -6,6 +6,12 @@ public class GameController : MonoBehaviour
 {
     // Timer
     [SerializeField] private float timer = 1f;
+
+    // Meu obstáculo
+    [SerializeField] private GameObject obstaculo;
+
+    // Posição para criar o obstáculo
+    [SerializeField] private Vector3 posicao;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +38,8 @@ public class GameController : MonoBehaviour
             timer = 1f;
 
             // Criando os meus obstáculos
+            // Comando para instanciar algo
+            Instantiate(obstaculo, posicao, Quaternion.identity);
         }
     }
 
