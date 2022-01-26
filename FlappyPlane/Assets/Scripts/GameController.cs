@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour
     // TEmpo mínimo e máximo
     [SerializeField] private float tMin = 1f;
     [SerializeField] private float tMAx = 3f;
+
+    // Variável dos pontos
+    private float pontos = 0f;
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,25 @@ public class GameController : MonoBehaviour
         // Checar se o valor é menor ou igual a 0
         // SE a condião for verdadeira então diga "Oi"
 
+        // Ganhando pontos
+        Pontos();
+
+
+
+        // Refatore este código e chame de CriaObstáculo
+        CriaObstaculo();
+    }
+
+        // Criando o método para lidar com os pontos
+        private void Pontos()
+        {
+        pontos += Time.deltaTime;
+
+        Debug.Log(pontos);
+    }
+
+    private void CriaObstaculo()
+    {
         timer -= Time.deltaTime;
         // timer = timer - Time.deltaTime;
 
@@ -45,7 +67,7 @@ public class GameController : MonoBehaviour
             // Resetando o meu timer
             // Timer vai ficar com um valor aleatório entre 1f e 3f
             timer = Random.Range(tMin, tMAx);
-            
+
 
 
             posicao.y = Random.Range(posMin, posMax);
@@ -56,5 +78,5 @@ public class GameController : MonoBehaviour
         }
     }
 
-    // Dando oi a cada 1 segundo
+    
 }
