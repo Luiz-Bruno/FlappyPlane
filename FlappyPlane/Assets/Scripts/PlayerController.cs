@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -47,5 +48,14 @@ public class PlayerController : MonoBehaviour
             // Fazendo a velocidade do RB ir para cima
             meuRB.velocity = Vector2.up * velocidade;
         }
+    }
+
+    // Configurando a colisão do player
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Bati!");
+
+        //Usando o Scenemanager, eu preciso dar load na cena "Jogo"
+        SceneManager.LoadScene("Jogo");
     }
 }
