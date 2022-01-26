@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
 
     // Posição para criar o obstáculo
     [SerializeField] private Vector3 posicao;
+
+    // Posição mínima e máxima
+    [SerializeField] private float posMin = -0.3f;
+    [SerializeField] private float posMax = 2.4f;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,9 @@ public class GameController : MonoBehaviour
 
             // Resetando o meu timer
             timer = 1f;
+
+
+            posicao.y = Random.Range(posMin, posMax);
 
             // Criando os meus obstáculos
             // Comando para instanciar algo
