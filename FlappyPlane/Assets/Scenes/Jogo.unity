@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6022d5b3aa740b545a038c05b08c601f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidade: 0.1
 --- !u!1001 &2352751829333310160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -537,6 +538,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1855349974225483187, guid: 3588f7138e0fa8e4d81b94daa2ef4d6a, type: 3}
+      propertyPath: m_Radius
+      value: 0.37742758
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855349974225483187, guid: 3588f7138e0fa8e4d81b94daa2ef4d6a, type: 3}
+      propertyPath: m_Offset.x
+      value: -5.729036
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855349974225483187, guid: 3588f7138e0fa8e4d81b94daa2ef4d6a, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.2075834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981578963595694298, guid: 3588f7138e0fa8e4d81b94daa2ef4d6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981578963595694298, guid: 3588f7138e0fa8e4d81b94daa2ef4d6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.17
+      objectReference: {fileID: 0}
     - target: {fileID: 8981578964744213904, guid: 3588f7138e0fa8e4d81b94daa2ef4d6a, type: 3}
       propertyPath: m_Name
       value: Player

@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
         Subir();
 
         LimitandoVelocidade();
+
+        // Morrendo ao sair da tela
+        MorrendoAoSair();
     }
 
     private void LimitandoVelocidade()
@@ -48,7 +51,21 @@ public class PlayerController : MonoBehaviour
             // Fazendo a velocidade do RB ir para cima
             meuRB.velocity = Vector2.up * velocidade;
         }
+    } 
+
+
+    // Reiniciando ao sair da tela
+    private void MorrendoAoSair()
+    {
+        // Checando se eu saí da tela
+        if (transform.position.y > 2.5f || transform.position.y < -8.5f)
+        {
+            // Reiniciando o jogo
+            SceneManager.LoadScene(0);
+        }
+
     }
+     
 
     // Configurando a colisão do player
     private void OnTriggerEnter2D(Collider2D collision)
