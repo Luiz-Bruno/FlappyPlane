@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
 
     // Variável do level
     private int level = 1;
+    [SerializeField] private Text levelTexto;
 
     // Variável para ganhar level
     [SerializeField] private float proximoLevel = 10f;
@@ -73,8 +74,12 @@ public class GameController : MonoBehaviour
     // Ganhando level
     private void GanhaLevel()
     {
-        // Mostando o level
-        Debug.Log(level);
+       
+
+        // Passando o level para o texto do level
+        levelTexto.text = level.ToString();
+
+
         // SE os pontos forem maiores do que próximo level, então eu aumento o valor do level
         // Eu dobro a quantidade de pontos para o próximo level
         if (pontos > proximoLevel)
@@ -109,5 +114,10 @@ public class GameController : MonoBehaviour
         }
     }
 
-    
+    // Criando um método para retornar o level
+    public int RetornaLevel()
+    {
+        return level;
+    }
+
 }

@@ -6,9 +6,12 @@ public class ObstaculoController : MonoBehaviour
 {
 
     // Variável dfe velocidade
-    [SerializeField] private float velocidade = 5f;
+    [SerializeField] private float velocidade = 4f;
 
     [SerializeField] private GameObject eu;
+
+    // Criando a variável do game controller
+    [SerializeField] private GameController game;
 
 
     
@@ -16,6 +19,11 @@ public class ObstaculoController : MonoBehaviour
     void Start()
     {
         Destroy(eu, 5f);
+
+        // Encontrando o game controller da cena atual
+        game = FindObjectOfType<GameController>();
+
+       
     }
 
     // Update is called once per frame
@@ -24,5 +32,8 @@ public class ObstaculoController : MonoBehaviour
         // Indo para a esquerda
         //transform.position = transform.position + Vector3.left;
         transform.position += Vector3.left * Time.deltaTime * velocidade;
+
+        // A minha velocidade vai ser 4f + level
+        velocidade = 4f + game.RetornaLevel();
     }
 }
