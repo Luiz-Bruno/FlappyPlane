@@ -53,3 +53,4 @@ MonoBehaviour:
   pontosTexto: {fileID: 0}
   levelTexto: {fileID: 0}
   proximoLevel: 10
+  levelUp: {fileID: 8300000, guid: 1c2adf00d20bfb440b7b90a40773676f, type: 3}
