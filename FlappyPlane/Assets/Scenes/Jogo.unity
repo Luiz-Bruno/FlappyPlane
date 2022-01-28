@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: pontosTexto
       value: 
       objectReference: {fileID: 493051371}
+    - target: {fileID: 6519707467193949393, guid: 861ee0506cf48114c8f5fccd882a2f64, type: 3}
+      propertyPath: proximoLevel
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 861ee0506cf48114c8f5fccd882a2f64, type: 3}
 --- !u!1001 &8981578964547875758
