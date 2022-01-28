@@ -27,6 +27,12 @@ public class GameController : MonoBehaviour
 
     // Variável dos pontos do canvas
     [SerializeField] private Text pontosTexto;
+
+    // Variável do level
+    private int level = 1;
+
+    // Variável para ganhar level
+    [SerializeField] private float proximoLevel = 10f;
     
     // Start is called before the first frame update
     void Start()
@@ -49,18 +55,35 @@ public class GameController : MonoBehaviour
 
         // Refatore este código e chame de CriaObstáculo
         CriaObstaculo();
+
+        // Ganhando level
+        GanhaLevel();
     }
 
         // Criando o método para lidar com os pontos
-        private void Pontos()
-        {
+    private void Pontos()
+    {
         pontos += Time.deltaTime;
 
         // Passando os meus pontos para o texto dos pontos
         pontosTexto.text = Mathf.Round(pontos).ToString();
 
+    }
 
-        Debug.Log(Mathf.Round(pontos));
+    // Ganhando level
+    private void GanhaLevel()
+    {
+        // Mostando o level
+        Debug.Log(level);
+        // SE os pontos forem maiores do que próximo level, então eu aumento o valor do level
+        // Eu dobro a quantidade de pontos para o próximo level
+        if (pontos > proximoLevel)
+        {
+            // Aumentando o level em 1
+            level++;
+            // Dobrando o valor do próximo level
+            proximoLevel = proximoLevel * 2; // proximoLevel *= 2;
+        }
     }
 
     private void CriaObstaculo()
@@ -70,7 +93,7 @@ public class GameController : MonoBehaviour
 
         if (timer <= 0)
         {
-            Debug.Log("Oi");
+            
 
             // Resetando o meu timer
             // Timer vai ficar com um valor aleatório entre 1f e 3f
