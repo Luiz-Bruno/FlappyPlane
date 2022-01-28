@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -17,12 +18,15 @@ public class GameController : MonoBehaviour
     [SerializeField] private float posMin = -0.3f;
     [SerializeField] private float posMax = 2.4f;
 
-    // TEmpo mínimo e máximo
+    // Tempo mínimo e máximo
     [SerializeField] private float tMin = 1f;
     [SerializeField] private float tMAx = 3f;
 
     // Variável dos pontos
     private float pontos = 0f;
+
+    // Variável dos pontos do canvas
+    [SerializeField] private Text pontosTexto;
     
     // Start is called before the first frame update
     void Start()
@@ -51,6 +55,9 @@ public class GameController : MonoBehaviour
         private void Pontos()
         {
         pontos += Time.deltaTime;
+
+        // Passando os meus pontos para o texto dos pontos
+        pontosTexto.text = Mathf.Round(pontos).ToString();
 
 
         Debug.Log(Mathf.Round(pontos));
