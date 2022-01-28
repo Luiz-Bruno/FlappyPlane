@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     // Velocidade
     [SerializeField] private float velocidade = 5f;
+
+    [SerializeField] private GameObject puff;
     
     // Start is called before the first frame update
     void Start()
@@ -50,6 +52,13 @@ public class PlayerController : MonoBehaviour
         {
             // Fazendo a velocidade do RB ir para cima
             meuRB.velocity = Vector2.up * velocidade;
+
+            // Crie o puff - Colocando a instância (GameObject) do puff na memória do jogo
+            // Salvando a instância criada em uma variável
+            GameObject meuPuff = Instantiate(puff, transform.position, Quaternion.identity);
+
+            // Destruindo o meu puff
+            Destroy(meuPuff, 2f);
         }
     } 
 
