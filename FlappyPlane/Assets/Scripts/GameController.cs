@@ -34,11 +34,17 @@ public class GameController : MonoBehaviour
 
     // Variável para ganhar level
     [SerializeField] private float proximoLevel = 10f;
+
+    // Variável do som
+    [SerializeField] private AudioClip levelUp;
+
+    // Variaável com a posição da minha câmera
+    private Vector3 camPos;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        camPos = Camera.main.transform.position;
     }
 
     // Update is called once per frame
@@ -84,6 +90,9 @@ public class GameController : MonoBehaviour
         // Eu dobro a quantidade de pontos para o próximo level
         if (pontos > proximoLevel)
         {
+            // Tocando o som
+            AudioSource.PlayClipAtPoint(levelUp, transform.position);
+            
             // Aumentando o level em 1
             level++;
             // Dobrando o valor do próximo level
