@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour
 
             // Resetando o meu timer
             // Timer vai ficar com um valor aleatório entre 1f e 3f
-            timer = Random.Range(tMin, tMAx);
+            timer = Random.Range(tMin / level, tMAx);
 
 
 
