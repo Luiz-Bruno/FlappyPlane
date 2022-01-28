@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     private void MorrendoAoSair()
     {
         // Checando se eu saí da tela
-        if (transform.position.y > 2.5f || transform.position.y < -8.5f)
+        if (transform.position.y > 5.5f || transform.position.y < -5.5f)
         {
             // Reiniciando o jogo
             SceneManager.LoadScene(0);
