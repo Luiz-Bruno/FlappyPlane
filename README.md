@@ -25,6 +25,8 @@ Clone do famoso Flappy Bird! Aprendendo a simular gravidade, sistema de pontos, 
 * Criar um jogo similar a Flappy Birds
 * Publicar o jogo
 ##
+Link para baixar: https://luiz-bruno.itch.io/flappy-plane
+##
 Créditos:
 
 Sprites criadas por Kenney www.kenney.nl
