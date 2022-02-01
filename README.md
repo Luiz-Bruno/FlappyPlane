@@ -23,7 +23,7 @@ Clone do famoso Flappy Bird! Aprendendo a simular gravidade, sistema de pontos, 
 * Animar a tela inicial
 * Altenar entre cenas
 * Criar um jogo similar a Flappy Birds
-* Publicar o seu jogo
+* Publicar o jogo
 ##
 Créditos:
 
